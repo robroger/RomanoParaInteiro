@@ -44,7 +44,7 @@ int romanConverter(char string[]){
 		char caractere_atual = string[i];
 		char caractere_pos = string[i+1];
 
-		convertido = valordeumchar(caractere_atual);
+		convertido = convertido + valordeumchar(caractere_atual);
 		i++;
 	}
 
