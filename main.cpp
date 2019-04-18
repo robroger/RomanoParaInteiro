@@ -25,6 +25,17 @@ TEST(RomanConverterTest, TIPO2){
 	EXPECT_EQ(2050, romanConverter((char*)"MML"));	
 }
 
+//Teste para tipos que precisam de subtração
+TEST(RomanConverterTest, TIPO3){
+	EXPECT_EQ(4, romanConverter((char*)"IV"));
+	EXPECT_EQ(49, romanConverter((char*)"XLIX"));
+	EXPECT_EQ(434, romanConverter((char*)"CDXXXIII"));
+	EXPECT_EQ(659, romanConverter((char*)"DCLIX"));
+	EXPECT_EQ(1474, romanConverter((char*)"MCDLXXIV"));
+	EXPECT_EQ(1511, romanConverter((char*)"MDXI"));
+	EXPECT_EQ(1760, romanConverter((char*)"MDCCLX"));	
+}
+
 int main(int argc, char** argv){
 	::testing::InitGoogleTest(&argc, argv);
 	return RUN_ALL_TESTS();
