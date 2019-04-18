@@ -14,7 +14,16 @@ TEST(RomanConverterTest, TIPO1){
 	EXPECT_EQ(1000, romanConverter((char*)"M"));
 }
 
-
+//Teste para tipos que precisam de soma
+TEST(RomanConverterTest, TIPO2){
+	EXPECT_EQ(6, romanConverter((char*)"VI"));
+	EXPECT_EQ(13, romanConverter((char*)"XIII"));
+	EXPECT_EQ(355, romanConverter((char*)"CCCLV"));
+	EXPECT_EQ(523, romanConverter((char*)"DXXIII"));
+	EXPECT_EQ(808, romanConverter((char*)"DCCCVIII"));
+	EXPECT_EQ(1130, romanConverter((char*)"MCXXX"));
+	EXPECT_EQ(2050, romanConverter((char*)"MML"));	
+}
 
 int main(int argc, char** argv){
 	::testing::InitGoogleTest(&argc, argv);
