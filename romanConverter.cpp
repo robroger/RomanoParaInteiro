@@ -5,7 +5,7 @@
 
 using namespace std;
 
-int valordeumchar (char caractere) {
+int valordeumchar (char caractere) {	// Switch case para definir tipos básicos
 	switch (caractere){
 		case 'I':
 			return 1;
@@ -36,16 +36,21 @@ int valordeumchar (char caractere) {
 
 int romanConverter(char string[]){
     int i = 0;
-    int convertido = 0;
+    int convertido = 0;		// Resultado da conversão para inteiro
 	char caractere_atual;
 	char caractere_pos;
 
-	while(i<strlen(string) && string[i] != '\0') {
+	while(i<strlen(string) && string[i] != '\0') {	// Loop para percorrer a string
 		char caractere_atual = string[i];
 		char caractere_pos = string[i+1];
-
-		convertido = convertido + valordeumchar(caractere_atual);
-		i++;
+		
+		if (valordeumchar(caractere_atual) >= valordeumchar(caractere_pos)){ // If para tipos que precisam de soma para conversão
+			convertido = convertido + valordeumchar(caractere_atual);
+			i++;
+		} else if (valordeumchar(caractere_atual) < valordeumchar(caractere_pos)) {
+			convertido = convertido + valordeumchar(caractere_pos) - valordeumchar(caractere_atual); // If para tipos que precisam de subtração
+			i = i + 2;
+		}
 	}
 
     return convertido;

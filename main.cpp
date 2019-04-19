@@ -29,7 +29,7 @@ TEST(RomanConverterTest, TIPO2){
 TEST(RomanConverterTest, TIPO3){
 	EXPECT_EQ(4, romanConverter((char*)"IV"));
 	EXPECT_EQ(49, romanConverter((char*)"XLIX"));
-	EXPECT_EQ(434, romanConverter((char*)"CDXXXIII"));
+	EXPECT_EQ(434, romanConverter((char*)"CDXXXIV"));
 	EXPECT_EQ(659, romanConverter((char*)"DCLIX"));
 	EXPECT_EQ(1474, romanConverter((char*)"MCDLXXIV"));
 	EXPECT_EQ(1511, romanConverter((char*)"MDXI"));
