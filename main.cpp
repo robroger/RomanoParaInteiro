@@ -15,6 +15,17 @@ TEST(RomanConverterTest, VALORINVALIDO){
 	EXPECT_EQ(-1, romanConverter((char*)"MMIi"));
 }
 
+//Teste para números inválidos
+TEST(RomanConverterTest, NUMEROINVALIDO){
+	EXPECT_EQ(-1, romanConverter((char*)"VV"));
+	EXPECT_EQ(-1, romanConverter((char*)"LL"));
+	EXPECT_EQ(-1, romanConverter((char*)"DD"));
+	EXPECT_EQ(-1, romanConverter((char*)"IIII"));
+	EXPECT_EQ(-1, romanConverter((char*)"XXXX"));
+	EXPECT_EQ(-1, romanConverter((char*)"CCCC"));
+	EXPECT_EQ(-1, romanConverter((char*)"MMMM"));
+}
+
 //Teste para tipos básicos - 1, 5, 10, 50, 100, 500, 1000.
 TEST(RomanConverterTest, TIPO1){
 	EXPECT_EQ(1, romanConverter((char*)"I"));
