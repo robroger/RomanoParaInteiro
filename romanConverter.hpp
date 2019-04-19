@@ -5,7 +5,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-int romanConverter(char string[]);
+int romanConverter(char string[]); 
 
 #endif
 
